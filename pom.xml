@@ -30,21 +30,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.sutian.goldassist</groupId>
-            <artifactId>goldassist-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sutian.goldassist</groupId>
-            <artifactId>goldassist-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sutian.goldassist</groupId>
-            <artifactId>goldassist-web</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
 
 
         <dependency>

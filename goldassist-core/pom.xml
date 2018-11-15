@@ -11,5 +11,12 @@
 
     <artifactId>goldassist-core</artifactId>
 
+    <dependencies>
 
+        <dependency>
+            <groupId>com.sutian.goldassist</groupId>
+            <artifactId>goldassist-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 </project>
