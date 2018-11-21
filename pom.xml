@@ -3,16 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.9.RELEASE</version>
-    </parent>
-
     <groupId>com.sutian.goldassist</groupId>
     <artifactId>goldassist-parent</artifactId>
-    <version>1.0.0</version>
+    <version>${project.version}</version>
     <packaging>pom</packaging>
     <name>goldassist-server</name>
     <url>http://maven.apache.org</url>
@@ -23,6 +16,12 @@
         <module>goldassist-web</module>
     </modules>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+    </parent>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -30,8 +29,6 @@
     </properties>
 
     <dependencies>
-
-
 
         <dependency>
             <groupId>org.jsoup</groupId>
@@ -55,14 +52,24 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5</version>
+        </dependency>
     </dependencies>
 
     <build>
         <finalName>goldhome-backend</finalName>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <parameters>true</parameters>
+                </configuration>
             </plugin>
         </plugins>
     </build>
